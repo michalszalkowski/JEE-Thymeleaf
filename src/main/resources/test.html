@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8"/>
+<body>
+
+    <h2>Title</h2>
+    <p th:text="${home.message}">Test paragraph</p>
+
+    <hr/>
+
+    <h2>Address</h2>
+    <span th:text="${address.city}"></span><br/>
+    <span th:text="${address.country}"></span><br/>
+    <span th:text="${address.zipCode}"></span><br/>
+    <span th:text="${address.number}"></span>
+
+    <hr/>
+
+    <h2>Addresses</h2>
+
+    <ul>
+        <li th:each="address : ${addresses}">
+            <span th:text="${address.city}"></span><br/>
+        </li>
+    </ul>
+
+    <hr/>
+</body>
+</html>
